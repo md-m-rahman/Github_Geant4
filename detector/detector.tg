@@ -1,0 +1,20 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:rotm chamber_rot 0 0 0
+:rotm vacuum_rot 0 0 0
+
+// Rin, Rout, half z in mm, start phi, dphi in degree
+// Rin, Rout, half z in mm, start phi, dphi in degree
+
+:solid chamber TUBS 0*cm 10*cm 10*cm 0 360
+:solid vacuum TUBS 0*cm 8*cm 8*cm 0 360
+
+:volu chamber chamber G4_STAINLESS-STEEL
+:volu vacuum vacuum G4_Galactic
+
+:color chamber 1.00 0.11 0.11
+:color vacuum 1.00 0.11 0.11
+
+:place chamber 1 world chamber_rot -4.3666174*cm 0.6965207*cm 1.6897974000000002*cm
+:place vacuum 1 chamber vacuum_rot 0 0 0

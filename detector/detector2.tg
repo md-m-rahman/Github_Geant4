@@ -1,0 +1,33 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:rotm cylinder_rot 0 0 0
+:rotm Flange_rot 0 0 0
+:rotm Lid_rot 0 0 0
+
+
+// Rin, Rout, half z in mm, start phi, dphi in degree
+// Rin, Rout, half z in mm, start phi, dphi in degree
+// Rin, Rout, half z in mm, start phi, dphi in degree
+// Rin, Rout, half z in mm, start phi, dphi in degree
+// Rin, Rout, half z in mm, start phi, dphi in degree
+
+:solid cylinder TUBS 9*cm 10*cm 10*cm 0 360
+:solid Flange TUBS 10*cm 12*cm 1*cm 0 360
+:solid Lid TUBS 0*cm 12*cm 1*cm 0 360
+
+
+:volu cylinder cylinder G4_STAINLESS-STEEL
+:volu Flange Flange G4_STAINLESS-STEEL
+:volu Lid Lid G4_STAINLESS-STEEL
+
+:color cylinder 1.00 0.11 0.11
+:color Flange 1.00 0.11 0.11
+:color Lid 1.00 0.11 0.11
+
+
+:place cylinder 1 world cylinder_rot 0 0 0
+:place Flange 1 cylinder Flange_rot 0 0 11*cm
+:place Lid 1 cylinder Lid_rot 0 0 12*cm
+:place Lid 2 cylinder Lid_rot 0 0 -12*cm
+:place Flange 2 cylinder Flange_rot 0 0 -11*cm

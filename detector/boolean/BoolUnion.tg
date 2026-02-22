@@ -1,0 +1,19 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:rotm united_object_3e5ae1_rot 0.00000 0.00000 0.00000
+:rotm united_object_3e5ae1_rot_rel 0.00000 0.00000 0.00000
+:rotm rot_identity 0 0 0
+
+
+:solid Tube TUBS 0*cm 10*cm 10*cm 0 360
+:solid Box BOX 10*cm 10*cm 10*cm
+:solid united_object_3e5ae1 UNION  Tube Box rot_identity 5*cm 5*cm 5*cm 
+
+:volu united_object_3e5ae1 united_object_3e5ae1 G4_Si
+
+:color united_object_3e5ae1 0.11 0.41 1.00
+
+:place united_object_3e5ae1 1 world united_object_3e5ae1_rot 5*cm 5*cm 5*cm
+
+

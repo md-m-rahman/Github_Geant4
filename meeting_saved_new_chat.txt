@@ -1,0 +1,125 @@
+2026-02-14 17:17:16 From Manoj Adhikari USD to Everyone:
+	git clone https://github.com/jintonic/geant4
+	
+2026-02-14 17:28:18 From Manoj Adhikari USD to Everyone:
+	apt update
+	apt install -y git
+	
+2026-02-14 17:29:24 From Manoj Adhikari USD to Everyone:
+	dnf install -y git
+	
+2026-02-14 17:29:36 From Manoj Adhikari USD to Everyone:
+	yum install git -y
+	
+2026-02-14 17:35:38 From Manoj Adhikari USD to Everyone:
+	cd /root
+	mkdir -p work
+	cd work
+	git clone https://github.com/jintonic/geant4
+	
+2026-02-14 17:59:20 From Manoj Adhikari USD to Everyone:
+	export GEANT4_DATA_DIR=/work/geant4/datasets
+	
+2026-02-14 17:59:36 From Manoj Adhikari USD to Everyone:
+	geant4-config --install-datasets
+	
+2026-02-14 18:26:21 From Manoj Adhikari USD to Everyone:
+	:rotm r000 0 0 0
+	
+	:solid vessel TUBE 0 200 400
+	:solid topPlate TUBE 0 200 20
+	
+	:solid pmtBulb POLYCONE
+	0 360
+	4
+	0   0
+	30  0
+	40 -40
+	0  -40
+	
+	:solid pmtStem TUBE 0 8 40
+	:solid pmt UNION pmtBulb pmtStem r000 0 0 -60
+	
+	:volu vesselVol vessel G4_STAINLESS-STEEL
+	:color vesselVol 0.7 0.7 0.7
+	
+	:volu plateVol topPlate G4_STAINLESS-STEEL
+	:color plateVol 0.4 0.4 0.4
+	
+	:volu pmtVol pmt G4_STAINLESS-STEEL
+	:color pmtVol 1.0 0.8 0.0
+	
+	:volu world TUBE 0 350 600 G4_AIR
+	:vis world OFF
+	
+	:place vesselVol 1 world r000 0 0 -200
+	:place plateVol  1 world r000 0 0 220
+	:place pmtVol    1 world r000 0 0 200
+	
+2026-02-14 18:27:20 From Manoj Adhikari USD to Everyone:
+	/control/verbose 2
+	
+	/geometry/source detector.tg
+	/run/initialize
+	
+	/gps/particle e-
+	/gps/energy 900 keV
+	
+	/gps/pos/type Plane
+	/gps/pos/shape Circle
+	/gps/pos/radius 193 mm
+	/gps/pos/centre 0 0 550 mm
+	
+	/gps/direction 0 0 -1
+	
+	/vis/open
+	/vis/drawVolume
+	
+	/vis/viewer/zoomTo 0.8
+	/vis/viewer/set/lightsMove cam
+	/vis/viewer/set/style surface
+	/vis/viewer/set/upVector 0 0 1
+	/vis/viewer/set/background 0 0.1 0.3
+	/vis/viewer/set/viewpointThetaPhi 90 0
+	/vis/viewer/set/lineSegmentsPerCircle 120
+	
+	/vis/scene/add/trajectories smooth
+	/vis/scene/endOfEventAction accumulate 100
+	
+	/vis/modeling/trajectories/create/drawByParticleID
+	/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
+	/vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsColour red
+	
+	/vis/verbose 0
+	/control/verbose 0
+	
+	/run/beamOn 100
+	
+	/control/doifBatch /control/execute tsg.mac
+	
+	/control/shell if ls *.png 1>/dev/null 2>&1; then \
+	 ffmpeg -i "g4tsg_offscreen_zb_png_%d.png" -y starship.gif; fi
+	/control/shell if [ -f starship.gif ]; then rm -f *.png; fi
+	
+2026-02-14 18:28:17 From Manoj Adhikari USD to Everyone:
+	/control/getEnv G4VIS_DEFAULT_DRIVER
+	/control/strdoif {G4VIS_DEFAULT_DRIVER} == TSG_FILE \
+	/control/loop loop.mac phi 0 360 1
+	
+2026-02-14 18:28:35 From Manoj Adhikari USD to Everyone:
+	detector.tg,run.mac,tsg.mac
+	
+2026-02-14 18:28:53 From Manoj Adhikari USD to Everyone:
+	/vis/viewer/set/viewpointThetaPhi 60 {phi}
+	/run/beamOn 100
+	/vis/viewer/rebuild
+	
+2026-02-14 18:28:57 From Manoj Adhikari USD to Everyone:
+	loop.mac
+	
+2026-02-14 19:04:20 From Manoj Adhikari USD to Everyone:
+	dnf install git -y
+	
+2026-02-14 19:05:27 From Manoj Adhikari USD to Everyone:
+	git clone https://github.com/jintonic/geant4 .
+	

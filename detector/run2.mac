@@ -1,0 +1,19 @@
+/geometry/source detector2.tg
+/run/initialize
+
+/vis/open TSG_FILE
+/vis/drawVolume
+
+/vis/viewer/set/style surface
+/vis/viewer/set/hiddenEdge true
+/vis/geometry/set/forceSolid all 0 true
+/vis/viewer/set/background white
+
+/vis/scene/add/axes 0 0 0 1 m
+/vis/viewer/set/viewpointThetaPhi 90 180
+
+/vis/viewer/refresh
+/vis/viewer/flush
+
+
+

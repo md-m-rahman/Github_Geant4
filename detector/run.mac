@@ -1,0 +1,6 @@
+/geometry/source detector.tg
+/run/initialize
+/vis/drawTree
+/vis/open TSG_FILE
+/vis/drawVolume
+/vis/viewer/refresh

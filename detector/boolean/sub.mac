@@ -1,0 +1,19 @@
+/control/verbose 1
+/geometry/source BoolSub.tg
+
+/run/initialize
+
+/gps/particle gamma
+/gps/energy 2.6 MeV
+/gps/ang/type iso
+
+/vis/open TSG_FILE
+/vis/drawVolume
+/vis/viewer/set/autoRefresh true
+/vis/viewer/set/viewpointThetaPhi 45 45
+/vis/viewer/zoom 2
+
+/run/beamOn 100
+/vis/viewer/refresh
+/vis/viewer/flush
+

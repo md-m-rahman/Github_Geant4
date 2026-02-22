@@ -1,0 +1,16 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:rotm subtracted_object_88f49c_rot 0.00000 0.00000 0.00000
+:rotm subtracted_object_88f49c_rot_rel 0.00000 0.00000 0.00000
+:rotm rot_identity 0 0 0
+
+:solid cube BOX 10*cm 10*cm 10*cm
+:solid tube TUBS 0*cm 10*cm 10*cm 0 360
+:solid subtracted_object_88f49c SUBTRACTION  cube tube  rot_identity 5*cm 5*cm 5*cm
+
+:volu subtracted_object_88f49c subtracted_object_88f49c G4_Ge
+:color subtracted_object_88f49c 1.00 0.11 0.11
+
+:place subtracted_object_88f49c 1 world subtracted_object_88f49c_rot 5*cm 5*cm 5*cm
+

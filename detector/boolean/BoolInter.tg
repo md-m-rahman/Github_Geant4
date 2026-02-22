@@ -1,0 +1,18 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:rotm intersected_object_0cb9c2_rot 0.00000 0.00000 0.00000
+:rotm intersected_object_0cb9c2_rot_rel 0.00000 0.00000 0.00000
+:rotm rot_identity 0 0 0
+
+
+:solid rectangle BOX 10*cm 10*cm 10*cm
+:solid tube TUBS 0*cm 10*cm 10*cm 0 360
+:solid intersected_object_0cb9c2 INTERSECTION tube rectangle rot_identity 5*cm 5*cm 5*cm 
+
+:volu intersected_object_0cb9c2 intersected_object_0cb9c2 G4_Si
+
+:color intersected_object_0cb9c2 0.11 0.14 1.00
+
+:place intersected_object_0cb9c2 1 world intersected_object_0cb9c2_rot 5*cm 5*cm 5*cm
+

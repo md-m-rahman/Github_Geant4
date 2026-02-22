@@ -1,0 +1,23 @@
+
+/control/verbose 1
+/geometry/source BoolInter.tg
+
+/run/initialize
+
+/vis/open VRML2FILE
+/vis/drawVolume
+
+/vis/viewer/set/style surface
+/vis/viewer/set/hiddenEdge true
+/vis/geometry/set/forceSolid all 0 true
+
+/vis/viewer/set/autoRefresh true
+/vis/viewer/set/viewpointThetaPhi 45 45
+/vis/viewer/zoom 0.05
+
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
+/run/beamOn 100
+
+/vis/viewer/refresh
+/vis/viewer/flush
