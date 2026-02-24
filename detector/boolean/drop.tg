@@ -1,0 +1,31 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+
+:volu room BOX 300*cm 300*cm 300*cm G4_AIR
+:vis room OFF
+
+
+:mixt_by_natoms SUGAR 1.59 3
+  C 12
+  H 22 
+  O 11
+:mixt_by_natoms WATER 1.0 2
+  H 2 
+  O 1
+
+:mixt_by_mass SUGAR_SOLUTION 1.05 2 
+  WATER 0.9 
+  SUGAR 0.1
+
+:volu drop SPHERE 0 2*cm 0 360*deg 0 180*deg G4_WATER
+:color drop 0.9 0.2 0.2
+
+:rotm r000 0 0 0
+:rotm rx90 90 0 0
+
+:volu HPGe TUBE 0 2*cm 3*cm G4_Ge
+:color HPGe 0.5 0.5 0.5
+
+:place room 1 world r000 0 0 0
+:place drop 1 room r000 0 0 0
+:place HPGe 1 room rx90 0 10*cm 0
