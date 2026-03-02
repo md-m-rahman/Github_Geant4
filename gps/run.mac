@@ -1,0 +1,9 @@
+/run/initialize
+
+/vis/open
+/vis/drawVolume
+/vis/viewer/refresh
+/vis/scene/axes
+
+/vis/viewer/refresh
+
