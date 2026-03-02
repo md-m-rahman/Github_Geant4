@@ -2,8 +2,9 @@
 
 /vis/open
 /vis/drawVolume
-/vis/viewer/refresh
-/vis/scene/axes
 
+/vis/viewer/refresh
+
+/vis/scene/add/axes 0 0 0 10 cm
 /vis/viewer/refresh
 

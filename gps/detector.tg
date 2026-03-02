@@ -2,6 +2,7 @@
 :vis world OFF
 
 :volu box1 BOX 2*cm 2*cm 2*cm G4_WATER
+
 :rotm r000 0 0 0
 
 
