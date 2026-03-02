@@ -1,24 +1,21 @@
-# print macro commands on screen
 /control/verbose 1
-# uncomment the following line if you use https://github.com/jintonic/gears
 /geometry/source detector.tg
 
-# initialize geometry and physics
 /run/initialize
 
-/tracking/verbose 2
-
-# change particle and its energy here
 /gps/particle gamma
 /gps/energy 2.6 MeV
 /gps/ang/type iso
-/gps/position 0 0 -10 cm
-/gps/direction 0 0 1
-/run/beamOn 10
 
-# visualize geometry and events for debugging
 /vis/open TSG_FILE
 /vis/drawVolume
-/vis/scene/add/trajectories
+/vis/viewer/set/viewpointThetaPhi 45 45 
+/vis/viewer/set/autoRefresh true
+
+/vis/scene/add/trajectories smooth
+/vis/scene/add/hits
+
 /vis/scene/endOfEventAction accumulate
 /run/beamOn 100
+
+/vis/viewer/flush

@@ -1,10 +1,14 @@
+/control/verbose 1
+/geometry/source detector.tg
+
 /run/initialize
 
-/vis/open
+/vis/open TSG_FILE
 /vis/drawVolume
-
 /vis/viewer/refresh
 
 /vis/scene/add/axes 0 0 0 10 cm
 /vis/viewer/refresh
+
+
 

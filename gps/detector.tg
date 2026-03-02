@@ -1,7 +1,7 @@
 :volu world BOX 5*m 5*m 5*m G4_Galactic
 :vis world OFF
 
-:volu box1 BOX 2*cm 2*cm 2*cm G4_WATER
+:volu box1 BOX 2*cm 2*cm 2*cm G4_
 
 :rotm r000 0 0 0
 
