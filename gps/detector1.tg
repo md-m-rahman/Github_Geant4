@@ -1,0 +1,9 @@
+:volu Myworld BOX 5*m 5*m 5*m G4_Galactic
+:vis Myworld OFF
+
+:volu box1 BOX 1*cm 1*cm 1*cm G4_WATER
+
+:rotm r000 0 0 0
+
+:place box1 1 Myworld r000 0 0 0
+:color box1 0.77 0.51 0.27 
