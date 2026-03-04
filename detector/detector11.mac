@@ -1,0 +1,22 @@
+/control/verbose 1
+/geometry/source detector11.tg
+
+/run/initialize
+
+# change particle and its energy here
+/gps/particle gamma
+/gps/energy 2.6 MeV
+/gps/ang/type iso
+
+/vis/open TSG_FILE
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 45 45 
+/vis/viewer/set/autoRefresh true
+
+/vis/scene/add/trajectories smooth
+/vis/scene/add/hits
+
+/vis/scene/endOfEventAction accumulate
+/run/beamOn 100
+
+/vis/viewer/flush

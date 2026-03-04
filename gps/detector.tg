@@ -1,0 +1,32 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:rotm box1_rot 0 0 0
+:rotm box2_rot 0 0 0
+:rotm box3_rot 0 0 0
+:rotm dectetor_rot 0 0 0
+
+//Half x, Half y, Half z
+//Half x, Half y, Half z
+//Half x, Half y, Half z
+//Half x, Half y, Half z
+
+:solid box1 BOX 2*cm 2*cm 2*cm
+:solid box2 BOX 2*cm 2*cm 2*cm
+:solid box3 BOX 2*cm 2*cm 2*cm
+:solid detector BOX 2*cm 2*cm 2*cm
+
+:volu box1 box1 G4_AIR
+:volu box2 box2 G4_WATER
+:volu box3 box3 G4_Pb
+:volu dectetor detector G4_Ge
+
+:color box1 0.30 0.30 0.30
+:color box2 0.11 0.16 1.00
+:color box3 0.00 0.00 0.00
+:color dectetor 1.00 0.11 0.11
+
+:place box1 1 world box1_rot 10*cm 0 0
+:place box2 1 world box2_rot 0 10*cm 0
+:place box3 1 world box3_rot 0 0 0
+:place dectetor 1 world dectetor_rot 0 0 10*cm
