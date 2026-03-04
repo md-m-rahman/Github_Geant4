@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # print macro commands on screen
 /control/verbose 1
 # uncomment the following line if you use https://github.com/jintonic/gears
@@ -22,3 +23,19 @@
 /vis/scene/add/trajectories
 /vis/scene/endOfEventAction accumulate
 /run/beamOn 100
+=======
+/control/verbose 1
+/geometry/source detector.tg
+
+/run/initialize
+
+/vis/open TSG_FILE
+/vis/drawVolume
+/vis/viewer/refresh
+
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/viewer/refresh
+
+
+
+>>>>>>> a7e76c23d496b6955cc8e0f3c0f3e52f3734fc09

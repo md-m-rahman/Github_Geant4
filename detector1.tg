@@ -1,0 +1,16 @@
+// define a 10x10x10 m3 vacuum box as the world
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+//:volu pipe TUBE 500 600 700 G4_Ge
+:volu pipe TUBE 500 600 700 G4_Ge
+
+
+
+// define a rotation matrix that does nothing
+:rotm r000 0 0 0
+
+//:place pipe 1 world r000 0 0 0
+:place pipe 1 world r000 0 0 0
+//:color pipe 0.77 0.51 0.27
+color pipe 0.77 0.51 0.27

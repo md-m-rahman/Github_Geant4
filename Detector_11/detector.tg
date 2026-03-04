@@ -1,7 +1,6 @@
 :volu world BOX 5*m 5*m 5*m G4_Galactic
 :vis world OFF
 
-<<<<<<< HEAD
 :rotm box1_rot 0 0 0
 :rotm box2_rot 0 0 0
 :rotm box3_rot 0 0 0
@@ -31,14 +30,3 @@
 :place box2 1 world box2_rot 0 10*cm 0
 :place box3 1 world box3_rot 0 0 0
 :place dectetor 1 world dectetor_rot 0 0 10*cm
-=======
-:volu box1 BOX 2*cm 2*cm 2*cm G4_
-
-:rotm r000 0 0 0
-
-
-:place box1 1 world r000 0 0 0
-:color box1 1.0 0.5 0.31
-
-
->>>>>>> a7e76c23d496b6955cc8e0f3c0f3e52f3734fc09

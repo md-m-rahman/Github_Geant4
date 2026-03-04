@@ -1,0 +1,19 @@
+/control/verbose 0
+/process/em/verbose 0
+/process/had/verbose 0
+/geometry/source detector1.tg
+
+/run/initialize
+
+#/gps/particle gamma
+/gps/energy 100 MeV
+#/gps/pos/shape Box
+#/gps/pos/size 10 cm 10 cm 10 cm
+/gps/pos/centre 0 0 0
+
+/vis/open TSG_File
+/vis/drawVolume
+
+/vis/viewer/set/style s 
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/viewer/refresh
