@@ -12,7 +12,7 @@
 /vis/viewer/refresh
 
 /gps/source/add 5
-/gps/particle e+
+/gps/particle e-
 /gps/energy 2 MeV
 /gps/position -10 0 0 cm
 /gps/direction 1 0 0

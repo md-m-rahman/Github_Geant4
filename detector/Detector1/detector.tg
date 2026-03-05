@@ -1,0 +1,20 @@
+// define a 10x10x10 m3 vacuum box as the world
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:volu boxA BOX 200*cm 200*cm 200*cm G4_Galactic
+:vis boxA OFF
+:volu detector BOX 2*cm 2*cm 2*cm G4_Ge
+:volu drop SPHERE 0 1*cm 0 180 0 90 G4_TISSUE_SOFT_ICRP
+:volu box2 BOX 2*cm 2*cm 2*cm G4_Pb
+
+:rotm r000 0 0 0
+
+:place boxA 1 world r000 0 0 0
+:place detector 1 boxA r000 0 0 10*cm
+:place drop 1 boxA r000 5*cm 0 0
+:place box2 1 boxA r000 0 5*cm 0
+:color boxA 0.77 0.51 0.27
+:color detector 0.77 0.51 0.27
+:color drop 0.77 0.51 0.27
+:color box2 0.77 0.51 0.27
