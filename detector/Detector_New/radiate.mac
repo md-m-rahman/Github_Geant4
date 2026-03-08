@@ -1,5 +1,7 @@
 # print macro commands on screen
 /control/verbose 1
+process/em/verbose 0
+/process/had/verbose 0
 # geometry must be specified before /run/initialize
 /geometry/source detector.tg
 # specify a physics list
